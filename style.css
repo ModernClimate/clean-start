@@ -12,7 +12,11 @@ The CSS and HTML are released under the GPL:
 http://www.opensource.org/licenses/gpl-3.0.html
 */
 
-@import "css/reset.css";
+@import "js/bootstrap/css/bootstrap.min.css";
+/*
+	UNCOMMENT TO INCLUDE RESPONSIVE
+	@import "js/bootstrap/css/bootstrap-responsive.min.css";
+*/
 @import "css/typography.css";
 @import "css/global.css";
 @import "css/layout.css";
