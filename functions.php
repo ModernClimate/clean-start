@@ -16,11 +16,10 @@ endif;
 add_editor_style( 'editor-style.css' );
 
 function my_init_method() {
-  if (is_admin() == false ):
+    // LOAD JQUERY LOCALLY
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js');
+    wp_register_script( 'jquery', get_bloginfo('template_directory') . '/js/jquery-2.0.3.min.js');
     wp_enqueue_script( 'jquery' );
-  endif;
 }    
 add_action('init', 'my_init_method');
 ?>
