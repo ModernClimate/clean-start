@@ -1,27 +1,11 @@
-div {
-	position: relative;
-}
+div { position: relative; }
 
-.clear {
-	clear: both;
-	display: block;
-	height: 0;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-}
-
+/* does not support IE 6/7 */
 .clearfix:after {
-	clear: both;
-	content: ".";
-	display: block;
-	height: 0;
-	visibility: hidden;
+  content:"";
+  display:table;
+  clear:both;
 }
-
-/* Hack for IE7 */
-.clearfix {display:inline-block;}
-.clearfix {display:block;}
 
 /* WordPress Presentational Classes*/
 .aligncenter { display:block; margin:0 auto }
