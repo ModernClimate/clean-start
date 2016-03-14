@@ -6,11 +6,14 @@ register_sidebar( array('name' => 'Sidebar') );
 add_theme_support( 'automatic-feed-links' );
 
 function my_init_method() {
-  if(!is_admin()) {
-    wp_enqueue_script( 'jquery' );
-    wp_register_style( 'global', get_bloginfo('template_directory') . '/css/global.css');
-    wp_enqueue_style( 'global' );
-  }
+    if(!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', get_bloginfo('template_directory') . '/script/jquery.min.js');
+        wp_enqueue_script( 'jquery' );
+
+        wp_register_script('shared', get_bloginfo('template_directory') . '/script/shared.min.js');
+        wp_enqueue_script( 'shared' );
+    }
 }
 add_action('init', 'my_init_method');
 
