@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
     var jquery = [
-        "script/jquery.js"
+        "http://code.jquery.com/jquery-latest.js"
     ];
 
     var jsFileList = [ 
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: jquery,
-                        dest: "script/jquery.min.js"
+                        dest: "script/compiled/jquery.min.js"
                     }
                 ]
             },
@@ -34,20 +34,20 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: jsFileList,
-                        dest: "script/shared.min.js"
+                        dest: "script/compiled/shared.min.js"
                     }
                 ]
             }
         },
         watch: {
             sass: {
-                files: '**/*.scss',
+                files: 'style/*.scss',
                 tasks: [
                     'sass:shared'
                 ]
             },
             js: {
-                files: '**/*.js',
+                files: 'script/*.js',
                 tasks: [
                     'uglify:shared'
                 ]
