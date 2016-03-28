@@ -5,8 +5,8 @@
   </ul>
 
   <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    <?php previous_comments_link( '&larr; Older Comments'); ?>
-    <?php next_comments_link( 'Newer Comments &rarr;'); ?>
+    <?php previous_comments_link( __( '&larr; Older Comments', 'twentyten' ) ); ?>
+    <?php next_comments_link( __( 'Newer Comments &rarr;', 'twentyten' ) ); ?>
   <?php endif; ?>
 
   <?php if ( ! comments_open() ) : ?>
